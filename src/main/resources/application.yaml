@@ -2,13 +2,15 @@ spring:
   application:
     name: libreria
 
-  datasource:
-    url: jdbc:h2:file:./data/libreria_db
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
+  spring:
+    datasource:
+      url: jdbc:h2:mem:libreria_db
+      driver-class-name: org.h2.Driver
+      username: sa
+      password:
 
-  jpa:
+
+    jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
